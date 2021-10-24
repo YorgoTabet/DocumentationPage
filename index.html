@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./app.js"></script>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <title>React Docs</title>
+</head>
+<body id="container">
+    <nav id="navbar">
+        <header>React Docs</header>
+        <a class="nav-link" href="#getting_started">Getting Started</a>
+        <a class="nav-link" href="#what_is_react">What is React</a>
+        <a class="nav-link" href="#create_react_app">Create React App</a>
+        <a class="nav-link" href="#jsx">JSX</a>
+        <a class="nav-link" href="#component_types">Component Types</a>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="getting_started">
+          <header>Getting Started</header>
+          <p>Before we start building our react app, you should install a stable version of NodeJS</p>
+          <p>you can download NodeJS on the following <a href="https://nodejs.org/en/download/" target="_blank">link</a> </p>
+          <p>if you already have Node installed run the following command</p>
+          <code>node -v</code>
+          <li>Downlaoding node will automatically give you access to npm (node package manager) which we'll be using later</li>
+      </section>
+      <section class="main-section" id="what_is_react">
+          <header>What is react</header>
+          <p>React is a JavaScript Library that allows you to do component based web pages and SPAs (single page applications) </p>
+          <p>it has gained alot of attention and has a wide community around it</p>
+          <li>React was created by Facebook</li>
+      </section>
+      <section class="main-section" id="create_react_app">
+          <header>Create React App</header>
+          <p>What is Create React app?</p>
+          <p>Create react app is a command line tool that helps us generate a boilerplate react Application, with according 
+            webpack configuration to make developers life easier<br> installation and usage:
+          </p>
+          <code>npm i create-react-app</code><br>
+          <code>create-react-app yourappname</code>
+          <li>npm is a command that is available with NodeJS, it allows you to install packages and use them. For
+              more info check <a target="_blank" href="https://www.npmjs.com/">npmjs.org</a> </li>
+      </section>
+      <section class="main-section" id="jsx">
+          <header>JSX</header>
+          <p>JSX is the language used by react to allows programmers towrite xml like (close to html) tags and renders them 
+             to javascript
+          </p>
+          <p>This allows developers to easily write their code while adapting to a minimal amount of difference. While also providing
+              a very dynamic way of programming. <br> Example:
+          </p>
+          <code>
+                render(
+                    &lt;li&gt;I love react&lt;/li&gt;)
+             </code>
+          <li>Every JSX element return will be converted into the according document.createElement()</li>
+      </section>
+      <section class="main-section" id="component_types">
+          <header>Component types</header>
+          <p>In React there are two types of components</p>
+          <p>Class Based and Functional components</p>
+          <p>Class Based: is a class that return a component</p>
+          <pre><code style="background-color: transparent;">class Welcome extends React.Component {<br>
+            render() {<br>
+              return &lt;h1&gt;Hello, {this.props.name}&lt;/h1&gt;;<br>
+            }
+          }</code></pre>
+          <p>Functional: is a function that return a component</p>
+          <pre><code style="background-color: transparent;">function Welcome(props) {
+            return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;;
+          }</code></pre>
+          <li>The most recent and popular approach to creating a react component is using functions.</li>
+      </section>
+    </main>
+   
+</body>
+</html>
